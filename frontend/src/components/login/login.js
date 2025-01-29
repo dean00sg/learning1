@@ -1,46 +1,19 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // นำเข้า useNavigate
+import React from 'react';
+import { useNavigate } from 'react-router-dom'; 
+import UseLogin from '../../hooks/userLogin'; 
 
 const LoginPanel = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [showPassword, setShowPassword] = useState(false);
-  const [error, setError] = useState(null);
-  const navigate = useNavigate(); // สร้าง navigate function
-
-  const togglePasswordVisibility = () => {
-    setShowPassword(!showPassword);
-  };
-
-  const handleLogin = async () => {
-    const loginData = new URLSearchParams();
-    loginData.append('username', username);
-    loginData.append('password', password);
-
-    try {
-      const response = await fetch('http://127.0.0.1:8000/authentication/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: loginData.toString(),
-      });
-
-      if (response.ok) {
-        const data = await response.json();
-        console.log('Login success:', data);
-        // จัดเก็บ token ใน localStorage
-        localStorage.setItem('token', data.access_token);
-        // เปลี่ยนเส้นทางไปยังหน้า /Home
-        navigate('/Home');  
-      } else {
-        const errorData = await response.json();
-        setError(errorData.detail || 'Login failed');
-      }
-    } catch (error) {
-      setError('An error occurred. Please try again.');
-    }
-  };
+  const navigate = useNavigate(); 
+  const {
+    username,
+    setUsername,
+    password,
+    setPassword,
+    showPassword,
+    togglePasswordVisibility,
+    error,
+    handleLogin,
+  } = UseLogin(); 
 
   return (
     <div className="w-full max-w-sm mx-auto p-6 bg-white rounded-lg shadow-md">
@@ -84,7 +57,7 @@ const LoginPanel = () => {
 
       <button
         className="w-full py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none"
-        onClick={handleLogin}
+        onClick={() => handleLogin(navigate)} // pass navigate as argument
       >
         Sign in
       </button>

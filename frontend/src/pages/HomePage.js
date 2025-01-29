@@ -1,5 +1,6 @@
 import React from 'react';
-import UserInfo from '../components/checkIn_fo_user/UserInfo'; // Relative to the src folder
+import UserInfo from '../components/userInfo/userProfile';
+
 
 const HomePage = () => {
   console.log('Rendering HomePage');
@@ -11,7 +12,7 @@ const HomePage = () => {
         </div>
       </div>
       <div className="rightHome-section">
-        <UserInfo isAlternative={false} />
+        <UserInfo />
       </div>
     </>
   );
