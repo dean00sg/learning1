@@ -15,6 +15,13 @@ const LoginPanel = () => {
     handleLogin,
   } = UseLogin(); 
 
+  // Handle key press event for Enter key
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      handleLogin(navigate);
+    }
+  };
+
   return (
     <div className="w-full max-w-sm mx-auto p-6 bg-white rounded-lg shadow-md">
       <h2 className="text-2xl font-semibold text-center mb-4">Sign in</h2>
@@ -26,6 +33,7 @@ const LoginPanel = () => {
           placeholder="User Name"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
+          onKeyPress={handleKeyPress} // Add onKeyPress event
         />
       </div>
 
@@ -36,6 +44,7 @@ const LoginPanel = () => {
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          onKeyPress={handleKeyPress} // Add onKeyPress event
         />
         <button
           type="button"
@@ -57,7 +66,7 @@ const LoginPanel = () => {
 
       <button
         className="w-full py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none"
-        onClick={() => handleLogin(navigate)} // pass navigate as argument
+        onClick={() => handleLogin(navigate)} // Pass navigate as argument
       >
         Sign in
       </button>
