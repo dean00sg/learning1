@@ -21,10 +21,12 @@ const UserInfo = () => {
             <div className="flex items-center space-x-4">
                 <img src={userImage}
                     alt="User Profile"
-                    className="w-24 h-24 rounded-full object-cover border-4 border-green-500 p-1 shadow-md" />
+                    className="w-24 h-24 rounded-full object-cover border-4 border-green-600 p-1 shadow-md" />
                 <div className="user-details space-y-2">
                     <p className="text-xl font-semibold text-gray-800">{user.first_name} {user.last_name}</p>
-                    <p className="text-sm text-gray-600">Role : {user.role}</p>
+                    <div className="bg-green-400 p-1">
+                        <p className="text-sm text-gray-600 flex gap-2">Role : <div className="bg-green-700 ml-auto font-semibold text-white px-4">{user.role}</div></p>
+                    </div>
                     <p className="text-sm text-gray-600">Email : {user.email}</p>
                     <p className="text-sm text-gray-600">Phone : {user.contact_number}</p>
                 </div>

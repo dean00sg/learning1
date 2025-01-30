@@ -19,7 +19,7 @@ const InHeader = () => {
             <div className="bg-green-500 py-2 px-4 flex justify-between items-center shadow-md">
                 <div className="flex items-center text-white">
                     <FontAwesomeIcon icon={faHome} className="mr-2" />
-                    <div className="font-bold">Stay In Page : {location.pathname}</div>
+                    <div className=" font-semibold">Stay In Page : {location.pathname}</div>
                 </div>
 
                 <ul className="flex flex-wrap space-x-1 justify-center sm:justify-end">

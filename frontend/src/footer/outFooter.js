@@ -21,7 +21,7 @@ const OutFooter = () => {
                 </div>
                 <div className="text-sm text-right mt-4 md:mt-0">
                     <a
-                        href="#"
+                        href="https://github.com/dean00sg/learning1"
                         className="text-blue-600 hover:underline font-semibold"
                     >
                         Learning1 system testing web application by Dean.sg
