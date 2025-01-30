@@ -33,7 +33,7 @@ const LoginPanel = () => {
       }}>
       <div className='flex justify-center'>
         <img src={logo} alt="Logo" className="h-10 w-10 mr-2" />
-        <h2 className="text-3xl font-semibold text-center mb-1 text-white">Sign in</h2>
+        <h2 className="text-3xl font-semibold text-center mb-2 text-white">Sign in</h2>
       </div>
       <h2 className="text-sm  text-center mb-4 text-white">Login to using Learning1 system</h2>
 

@@ -32,12 +32,12 @@ const OutHeader = () => {
       </header>
 
       <nav className="bg-green-600 py-2">
-        <ul className="flex flex-wrap justify-center sm:justify-end pr-3 gap-2">
+        <ul className="flex flex-wrap justify-center sm:justify-end pr-3 gap-2 ">
           {['Home', 'About', 'Services', 'Contact'].map((item) => (
             <li key={item}>
               <a
                 href={`#${item.toLowerCase()}`}
-                className="text-sm text-blue-500 hover:text-blue-700 bg-white p-1 rounded-sm"
+                className="text-sm text-green-700 hover:text-green-900  p-1 font-semibold bg-green-50 rounded-sm"
               >
                 {item}
               </a>
