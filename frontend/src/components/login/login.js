@@ -23,7 +23,7 @@ const LoginPanel = () => {
   };
 
   return (
-    <div className="w-full max-w-sm mx-auto p-6 bg-white rounded-lg shadow-md">
+    <div className="w-full max-w-sm mx-auto p-6 ">
       <h2 className="text-2xl font-semibold text-center mb-4">Sign in</h2>
 
       <div className="mb-4">

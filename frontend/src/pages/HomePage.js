@@ -1,22 +1,28 @@
 import React from 'react';
 import UserInfo from '../components/userInfo/userProfile';
-
+import Home from '../components/home/home';
+import InHeader from '../headers/inheader';
+import Requesting from '../components/home/requesting';
 
 const HomePage = () => {
   console.log('Rendering HomePage');
+  
   return (
-    <>
-      <div className="app">
-        <div className="leftHome-section">
-          <h11>Requesting</h11>
+    <div className="min-h-screen bg-gray-100">
+      <InHeader />
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 p-4">
+
+        <div className="lg:col-span-2 bg-white p-4">
+          <Home />
+          <Requesting />
+        </div>
+
+        <div className="bg-white p-4   border-gray-300">
+          <UserInfo />
         </div>
       </div>
-      <div className="rightHome-section">
-        <UserInfo />
-      </div>
-    </>
+    </div>
   );
 };
-
 
 export default HomePage;
