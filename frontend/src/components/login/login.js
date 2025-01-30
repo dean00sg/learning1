@@ -65,7 +65,7 @@ const LoginPanel = () => {
       </div>
 
       <button
-        className="w-full py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none"
+        className="w-full py-3 bg-green-500 text-white rounded-md hover:bg-blue-600 focus:outline-none"
         onClick={() => handleLogin(navigate)} // Pass navigate as argument
       >
         Sign in
