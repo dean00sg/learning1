@@ -2,21 +2,30 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faHome } from '@fortawesome/free-solid-svg-icons';
 import { useLocation } from 'react-router-dom';
-import logo from '../assets/logolearning.png'; 
+import logo from '../assets/logolearning.png';
+import background from '../assets/background.png';
 
 const InHeader = () => {
     const location = useLocation();
 
     return (
         <div>
-            <header className="bg-green-700 text-white p-4 flex justify-between items-center">
-                <div className="flex items-center">
-                    <img src={logo} alt="Logo" className="h-10 w-10 mr-2" /> 
-                    <h1 className="text-4xl font-bold">Learning1</h1>
+            <header
+                className="text-white p-4 flex justify-between items-center"
+                style={{
+                    backgroundImage: `url(${background})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                 
+                }}
+            >
+                <div className="flex items-center w-full sm:w-auto">
+                    <img src={logo} alt="Logo" className="h-10 w-10 mr-2" />
+                    <h1 className="text-2xl sm:text-4xl font-bold text-white">Learning1</h1>
                 </div>
             </header>
 
-            <div className="bg-green-500 py-2 px-4 flex justify-between items-center shadow-md">
+            <div className="bg-green-600 py-2 px-4 flex justify-between items-center shadow-md">
                 <div className="flex items-center text-white">
                     <FontAwesomeIcon icon={faHome} className="mr-2" />
                     <div className=" font-semibold">Stay In Page : {location.pathname}</div>

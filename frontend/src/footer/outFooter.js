@@ -16,7 +16,7 @@ const OutFooter = () => {
                         Back-End : Fast API<br />
                         Front-End : React JS & Tailwind CSS<br />
                         DataBase : Postgresql<br /> */}
-                       
+
                     </div>
                 </div>
                 <div className="text-sm text-right mt-4 md:mt-0">
@@ -27,7 +27,16 @@ const OutFooter = () => {
                         Learning1 system testing web application by Dean.sg
                     </a>
                     <br />
-                    Copyright © 2025. All Rights Reserved. <span className="font-medium">Version L.1.D04/2</span>
+                    <div className="text-sm text-right mt-4 md:mt-0 flex items-center justify-end">
+                        <span>
+                            Copyright © 2025. All Rights Reserved.
+                        </span>
+                        <img src={logo} alt="Logo" className="h-4 w-4 mx-1" />
+                        <span className="font-medium">
+                            Version L.1.D04/2
+                        </span>
+                    </div>
+
                 </div>
             </div>
         </footer>

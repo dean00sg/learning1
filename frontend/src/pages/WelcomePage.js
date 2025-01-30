@@ -18,7 +18,7 @@ const WelcomePage = () => {
           <CardNews/>
         </div>
 
-        <div className="w-full lg:w-1/4 p-4 bg-gray-100 mt-6 lg:mt-0  shadow-md">
+        <div className="w-full lg:w-1/4  bg-gray-100 mt-6 lg:mt-0  shadow-md">
           <LoginPanel />
         </div>
 

@@ -1,9 +1,11 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom'; 
-import UseLogin from '../../hooks/userLogin'; 
+import { useNavigate } from 'react-router-dom';
+import UseLogin from '../../hooks/userLogin';
+import background from '../../assets/background.png';
+import logo from '../../assets/logolearning.png';
 
 const LoginPanel = () => {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
   const {
     username,
     setUsername,
@@ -13,7 +15,7 @@ const LoginPanel = () => {
     togglePasswordVisibility,
     error,
     handleLogin,
-  } = UseLogin(); 
+  } = UseLogin();
 
   // Handle key press event for Enter key
   const handleKeyPress = (e) => {
@@ -23,8 +25,17 @@ const LoginPanel = () => {
   };
 
   return (
-    <div className="w-full max-w-sm mx-auto p-6 ">
-      <h2 className="text-2xl font-semibold text-center mb-4">Sign in</h2>
+    <div className="w-full max-w-sm mx-auto p-6 "
+      style={{
+        backgroundImage: `url(${background})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}>
+      <div className='flex justify-center'>
+        <img src={logo} alt="Logo" className="h-10 w-10 mr-2" />
+        <h2 className="text-3xl font-semibold text-center mb-1 text-white">Sign in</h2>
+      </div>
+      <h2 className="text-sm  text-center mb-4 text-white">Login to using Learning1 system</h2>
 
       <div className="mb-4">
         <input
@@ -58,21 +69,21 @@ const LoginPanel = () => {
       {error && <p className="text-red-500 text-center mb-4">{error}</p>}
 
       <div className="flex justify-between items-center mb-4">
-        <label className="flex items-center text-sm">
-          <input type="checkbox" className="mr-2" /> Remember me
+        <label className="flex items-center text-sm text-white">
+          <input type="checkbox" className="mr-2 text-white" /> Remember me
         </label>
-        <a href="#" className="text-sm text-blue-500">Forgot Password?</a>
+        <a href="#" className="text-sm text-blue-500 ">Forgot Password?</a>
       </div>
 
       <button
-        className="w-full py-3 bg-green-500 text-white rounded-md hover:bg-blue-600 focus:outline-none"
+        className="w-full py-3 bg-green-500 text-white rounded-md hover:bg-green-700 focus:outline-none"
         onClick={() => handleLogin(navigate)} // Pass navigate as argument
       >
         Sign in
       </button>
 
-      <p className="text-center text-sm mt-4">
-        Don’t have an account? <a href="#" className="text-blue-500">Sign up</a>
+      <p className="text-center text-sm mt-4 text-white">
+        Don’t have an account ? <a href="#" className="text-blue-500">Sign up</a>
       </p>
     </div>
   );
