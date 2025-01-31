@@ -28,7 +28,7 @@ const UseLogin = () => {
         const data = await response.json();
         console.log('Login success:', data);
         localStorage.setItem('token', data.access_token);
-        navigate('/Home');
+        navigate('/home');
       } else {
         const errorData = await response.json();
         setError(errorData.detail || 'Login failed');

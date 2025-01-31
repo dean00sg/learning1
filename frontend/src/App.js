@@ -8,7 +8,7 @@ function App() {
     <BrowserRouter> {/* Wrap Routes inside BrowserRouter */}
       <Routes>
         <Route path="/" element={<WelcomePage />} />
-        <Route path="/Home" element={<HomePage />} />
+        <Route path="/home" element={<HomePage />} />
       </Routes>
     </BrowserRouter>
   );

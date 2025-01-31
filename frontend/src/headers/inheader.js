@@ -34,7 +34,7 @@ const InHeader = () => {
                 <ul className="flex flex-wrap space-x-1 justify-center sm:justify-end">
                     {["Home", "About", "Services", "Contact"].map((item, index) => (
                         <li key={index}>
-                            <a href={`#${item.toLowerCase()}`} className="text-sm text-green-700 hover:text-green-900 font-semibold bg-green-50  p-1 rounded-sm">
+                            <a href={`${item.toLowerCase()}`} className="text-sm text-green-700 hover:text-green-900 font-semibold bg-green-50  p-1 rounded-sm">
                                 {item}
                             </a>
                         </li>
